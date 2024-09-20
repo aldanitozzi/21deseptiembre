@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Carta para Ti</title>
+    <style>
+        body {
+            background: #ffffff; /* Color suave que recuerde las flores amarillas */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0; /* Elimina márgenes */
+            overflow-y: auto; /* Permite el desplazamiento vertical */
+            position: relative; /* Para que las flores se coloquen correctamente */
+        }
+        h1 {
+            color: #f1c40f;
+            margin-top: 20px;
+            font-size: 2.5em; /* Tamaño de fuente responsive */
+        }
+        .content {
+            margin-top: 50px;
+            padding-bottom: 100px; /* Añade espacio para el desplazamiento */
+            position: relative; /* Para que los mensajes se muestren por encima */
+        }
+        .message {
+            display: none;
+            font-size: 1.5em; /* Tamaño de fuente responsive */
+            margin-top: 20px;
+            animation: fadeIn 2s forwards;
+            color: #f39c12;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo ligero para mejorar la legibilidad */
+            padding: 10px; /* Espaciado interno */
+            border-radius: 8px; /* Bordes redondeados */
+            max-width: 90%; /* Ancho máximo */
+            margin-left: auto; /* Centra el contenido */
+            margin-right: auto; /* Centra el contenido */
+            z-index: 1; /* Asegura que los mensajes estén por encima de las flores */
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .flower {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            animation: fall 5s infinite linear;
+            z-index: 0; /* Para que las flores queden detrás */
+        }
+        @keyframes fall {
+            to { transform: translateY(100vh); }
+        }
+        /* Estilos para el mensaje y los botones */
+        #musicControls {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            text-align: right;
+            font-family: 'Arial', sans-serif;
+            z-index: 2; /* Asegura que los controles de música estén por encima */
+        }
+        #musicControls span {
+            display: block;
+            color: #f1c40f; /* Cambié el color al mismo que el del título */
+            font-size: 1.0em; /* Tamaño de fuente similar al título */
+        }
+        .music-buttons {
+            display: flex; /* Usa flexbox */
+            justify-content: center; /* Centra los botones */
+            margin-top: 10px; /* Espacio superior entre el texto y los botones */
+            font-family: 'Arial', sans-serif;
+        }
+        .btn-ver-carta, .btn-music {
+            background-color: #f1c40f; /* Color de fondo */
+            border: 2px solid #f39c12; /* Borde del botón */
+            color: #fff; /* Color del texto */
+            padding: 5px 8px; /* Espaciado interno más pequeño */
+            border-radius: 5px; /* Bordes más redondeados */
+            font-size: 0.8em; /* Tamaño de fuente más pequeño */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Efecto de transición */
+            margin: 0 5px; /* Espaciado horizontal entre botones */
+        }
+        /* Estilo para pantallas pequeñas */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.8em; /* Tamaño de fuente más pequeño */
+            }
+            .message {
+                font-size: 1.2em; /* Tamaño de fuente más pequeño */
+            }
+            #musicControls {
+                top: 5px;
+                right: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        FELIZ 21 DE SEPTIEMBRE, MI AMOR 
+        <img src="imagenes/foto2.png" alt="Flor" style="width: 40px; height: auto;">
+    </h1>
+    <button class="btn-ver-carta" onclick="showMessage()">Ver Carta</button>
+    <div class="content">
+        <p class="message">MI AMOR, EN ESTE 21 DE SEPTIEMBRE,<br>MIENTRAS CELEBRAMOS LA LLEGADA<br>DE LA PRIMAVERA,<br>NO PUEDO EVITAR PENSAR<br>EN LO QUE ERES PARA MÍ,<br>EN CADA MOMENTO QUE COMPARTIMOS,<br>EN CADA RISA Y MIRADA QUE<br>HACE QUE MI CORAZÓN VIBRE.</p>
+
+        <p class="message">CADA FLORECITA AMARILLA<br>QUE TE REGALO NO SOLO<br>SIMBOLIZA LA ALEGRÍA Y EL RENACER<br>DE LA NATURALEZA,<br>SINO TAMBIÉN EL AMOR PROFUNDO<br>QUE SIENTO POR TI,<br>UN AMOR QUE CRECE CADA DÍA,<br>COMO UN JARDÍN EN PLENA PRIMAVERA.</p>
+        
+        <p class="message">CADA RAYO DE SOL QUE TOCA<br>ESTAS FLORES ME RECUERDA<br>A TU SONRISA BRILLANTE,<br>QUE ILUMINA MI VIDA<br>Y ME HACE SENTIR VIVO,<br>COMO SI CADA MOMENTO A TU LADO<br>FUERA UNA PEQUEÑA ETERNIDAD<br>LLENA DE BELLEZA Y COLOR.</p>
+        
+        <p class="message">ERES MI RAZÓN DE SER,<br>Y EN CADA FLORECITA AMARILLA<br>VEO REFLEJADO EL CARIÑO<br>QUE HE CULTIVADO EN MI CORAZÓN<br>POR TI, UN CARIÑO QUE NO TIENE<br>FIN, QUE SE RENUEVA,<br>QUE CRECE COMO EL JARDÍN<br>QUE FLORECE EN PRIMAVERA.</p>
+        
+        <p class="message">Y SÉ QUE TUS FLORES FAVORITAS<br>SON LAS ROSAS AZULES<br>Y LOS LIRIOS EN CUALQUIER COLOR.<br>QUIERO QUE SEPAS QUE, AUNQUE<br>AMO LA BELLEZA DE LAS FLORES AMARILLAS,<br>LAS ROSAS AZULES Y LOS LIRIOS<br>TENEN SU PROPIO ENCANTO ÚNICO,<br>AL IGUAL QUE TÚ, QUE ERES<br>UNA MARAVILLA QUE TRANSFORMA<br>MI MUNDO EN UN LUGAR MÁGICO.</p>
+        
+        <p class="message">LAS ROSAS AZULES,<br>CON SU COLOR TAN RARO Y ESPECIAL,<br>SIMBOLIZAN UN AMOR<br>QUE ES AÚN MÁS PROFUNDO Y SINGULAR,<br>UN AMOR QUE VA MÁS ALLÁ<br>DE LO QUE PODRÍA IMAGINARSE,<br>Y ME HACEN PENSAR EN LO AFORTUNADO<br>QUE SOY DE TENERTE A MI LADO.</p>
+        
+        <p class="message">LOS LIRIOS, EN CUALQUIER TONALIDAD,<br>TRAEN UNA SENSACIÓN<br>DE PUREZA Y SERENIDAD,<br>QUE TAMBIÉN REFLEJAN<br>LO QUE SIENTO POR TI,<br>UNA PAZ QUE SOLO ENCONTRAMOS<br>JUNTOS, EN CADA MOMENTO QUE COMPARTIMOS.<br>DE LA MISMA MANERA,<br>CADA FLORECITA AMARILLA<br>QUE TE REGALO REFLEJA<br>LA ALEGRÍA Y LA VITALIDAD<br>QUE TRAES A MI VIDA.</p>
+        
+        <p class="message">ERES UNA COMBINACIÓN PERFECTA<br>DE LO ÚNICO Y LO BELLO,<br>UNA MEZCLA QUE ILUMINA<br>MIS DÍAS Y ME HACE SOÑAR.<br>CADA DÍA A TU LADO<br>ES UNA NUEVA AVENTURA,<br>UNA OPORTUNIDAD PARA<br>DESCUBRIR JUNTOS<br>LO QUE SIGNIFICA AMAR,<br>EN NUESTRO JARDÍN DE AMOR.</p>
+        
+        <p class="message">TE QUIERO MÁS DE LO QUE<br>LAS PALABRAS PUEDEN EXPRESAR,<br>Y CADA FLORECITA QUE TE REGALO<br>ES UN PEQUEÑO REFLEJO<br>DE LA INMENSA FELICIDAD<br>QUE SIENTO POR TI.</p>
+        
+    </div>
+
+    <div id="musicControls">
+        <span>Dale click para escuchar la música</span>
+        <div class="music-buttons">
+            <button id="playBtn" class="btn-music">play</button>
+            <button id="pauseBtn" class="btn-music">pause</button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="imagenes/musica1.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        function showMessage() {
+            const messages = document.querySelectorAll('.message');
+            messages.forEach((message, index) => {
+                setTimeout(() => {
+                    message.style.display = 'block'; // Muestra el mensaje
+                }, index * 8000); // Muestra cada mensaje con un intervalo de 8 segundos
+            });
+        }
+
+        // Crear flores que caen
+        function createFlower() {
+            const flower = document.createElement('img');
+            flower.classList.add('flower');
+            flower.src = 'imagenes/foto3.png'; // Cambia esto a la ruta de tu imagen
+
+            flower.style.left = Math.random() * 100 + 'vw'; // Posición aleatoria
+            flower.style.animationDuration = Math.random() * 3 + 5 + 's'; // Duración aleatoria de caída
+            document.body.appendChild(flower);
+
+            // Elimina la flor después de que cae
+            setTimeout(() => {
+                flower.remove();
+            }, 8000);
+        }
+
+        setInterval(createFlower, 500); // Crear una flor cada medio segundo (ajusta si es necesario)
+
+        // Controlar la música
+        const music = document.getElementById('backgroundMusic');
+        document.getElementById('playBtn').addEventListener('click', function() {
+            music.play();
+        });
+
+        document.getElementById('pauseBtn').addEventListener('click', function() {
+            music.pause();
+        });
+
+        
+    </script>
+</body>
+</html>
